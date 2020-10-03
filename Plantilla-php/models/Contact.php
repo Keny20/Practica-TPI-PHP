@@ -1,0 +1,41 @@
+<?php
+
+class Contact
+{
+    private $db;
+    
+    const TABLE_NAME = 'datos';
+
+    public function __construct($database)
+    {
+        $this->db = $database;
+        $this->sql = '';
+    }
+
+    public function list () {
+        $sql = "SELECT * FROM " . self::TABLE_NAME;
+        if ($result = $this->db->query($sql)) {
+            return $result;
+        }
+        
+    }
+    public function get () {
+
+    }
+    public function create () {
+
+    }
+    public function update () {
+
+    }
+    public function delete () {
+
+    }
+    // public function showContact()
+    // {
+    //     $contactDir = "contact.php";
+        
+    //     return $contactDir;
+        
+    // }
+}
